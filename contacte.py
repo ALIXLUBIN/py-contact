@@ -198,7 +198,7 @@ elif args.command == None:
           deleteManager(id)
     elif choix == "5":
         # Quitter le programme
-        print("Merci d'avoir utilisé le gestionnaire de managers. À bientôt !")
+        print("Merci d'avoir utilisé le gestionnaire de manager. À bientôt !")
         break
     else:
         print("Choix invalide. Veuillez réessayer.")

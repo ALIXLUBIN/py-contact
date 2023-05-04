@@ -3,6 +3,8 @@
 ## Description
 contacte.py est un programme qui permet de gérer une liste de managers. Il peut être utilisé de deux manières différentes: avec des arguments l'ors de l'execution ou bien en ligne de commande ou via un dialoge interactif.
 
+> ce program utilise la dépendence tabulate il faut donc l'installer  `pip install tabulate`
+
 ## Utilisation avec des arguments en ligne de commande
 
 > il est important de noter que les ==espaces== ne peuvent pas être utilsier dans un même argument

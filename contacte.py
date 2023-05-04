@@ -27,7 +27,7 @@ def addManager(name, surname, nickname, phone, email, address) :
 def displayManager() :
   result = cur.execute('''SELECT * FROM manager''').fetchall()
   len_res = len(result)
-  if len_res == 0 and filter == None:
+  if len_res == 0:
     print('Aucun manager n\'est enregister pour le moment')
   else :
     print("Il y a %s mananger" % (len_res))
@@ -167,7 +167,7 @@ elif args.command == None:
     elif choix == '2':
       displayManager()
       print('Voulez vous faire utilisez un filtre ?')
-      print('1 Nom')
+      print('1 Prénom')
       print('2 Nom de famille')
       print('3 Pseudo')
       print('4 Numéro de téléphone')

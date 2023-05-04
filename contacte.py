@@ -60,7 +60,6 @@ def filter(clause):
     if value != None:
       set += '%s=\'%s\' AND ' % (key, value)
   sql = sql + set[:-4]
-  print(sql)
   result = cur.execute(sql).fetchall()
   if len(result) == 0:
     print('Aucun manager ne correspond à vos filtre')
@@ -76,7 +75,7 @@ def filter(clause):
 parser = argparse.ArgumentParser(description='Gestionnaire des manager.')
 subparsers = parser.add_subparsers(dest='command')
 
-parser_search = subparsers.add_parser('search', help='Rechercher un manager. (plusieurs argument peuvent être tuiliser en même temps)')
+parser_search = subparsers.add_parser(' ', help='Rechercher un manager. (plusieurs argument peuvent être tuiliser en même temps)')
 parser_search.add_argument('-name', required=False, help='Nom du manager à rechercher.')
 parser_search.add_argument('-surname', required=False, help='Nom de Famille du manager à rechercher.')
 parser_search.add_argument('-nickname', required=False, help='pseudo du manager à rechercher.')
@@ -167,6 +166,33 @@ elif args.command == None:
       addManager(name, surname, nickname, phone, email, address)
     elif choix == '2':
       displayManager()
+      print('Voulez vous faire utilisez un filtre ?')
+      print('1 Nom')
+      print('2 Nom de famille')
+      print('3 Pseudo')
+      print('4 Numéro de téléphone')
+      print('5 email')
+      print('6 Adresse')
+      print('7 Menu principale')
+      choix2 = input("\nEntrez votre choix : ")
+
+      if choix2 == '1':
+        filter({ 'name': input('Entrez le prénom à rechercher : ')})
+      elif choix2 == '2':
+        filter({ 'surname': input('Entrez le nom de famille à rechercher : ')})
+      elif choix2 == '3':
+        filter({ 'nickname': input('Entrez le pseudo à rechercher : ')})
+      elif choix2 == '4':
+        filter({ 'phone': input('Entrez le numéro de téléphone à rechercher : ')})
+      elif choix2 == '5':
+        filter({ 'email': input('Entrez l\'email à rechercher : ')})
+      elif choix2 == '6':
+        filter({ 'address': input('Entrez l\'adresse à rechercher : ')})
+      elif choix2 == '7':
+        continue
+      else:
+        print('Choix invalide, veuillez entrer un chiffre entre 1 et 7')
+
     elif choix == '3':
       id = input("Entrez l'id du manager : ")
       if filter({'id': id}) != False :
@@ -202,12 +228,3 @@ elif args.command == None:
         break
     else:
         print("Choix invalide. Veuillez réessayer.")
-# avec le prompt
-
-
-
-
-
-# filter({'phone': 'test', 'surname': 'boop'})
-# addManager('test', 'test', None, 'test', 'test', 'test')
-# displayManager()

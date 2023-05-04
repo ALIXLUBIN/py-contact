@@ -24,11 +24,11 @@ Le programme peut être appelé avec les arguments suivants:
 ## Utilisation avec le prompt interactif
 Si le programme est lancé sans arguments, un prompt interactif s'affichera. Le menu principal offrira les options suivantes:
 
-`1. Ajouter un manager`
-`2. Afficher tous les managers`
-`3. Mettre à jour un manager`
-`4. Supprimer un manager`
-`5. Quitter le programme`
+`1. Ajouter un manager`<br>
+`2. Afficher tous les managers`<br>
+`3. Mettre à jour un manager`<br>
+`4. Supprimer un manager`<br>
+`5. Quitter le programme`<br>
 
 il suffit de répondre avec le numéro de l'action souhaiter
 Pour chaque option, le programme demandera les informations nécessaires (nom, e-mail, numéro de téléphone, etc.) et effectuera l'action correspondante.
@@ -46,14 +46,14 @@ Pour ajouter un manager il faut donc faire le choix numéro `1` demanderas :
 #### Exemple d'utilisation
 Pour ajouter un manager nommé "Jane Doe" avec l'e-mail "janedoe@example.com" et le numéro de téléphone "0785754598" et l'addresse "10-Rue-des-chemin", vous pouvez utiliser le numéro 1 et vous demanderas les inforamtion suivante se qui donneras le résultat suivant :
 
-`Entrez votre choix : 1`
-`Entrez le prénom du manager : Jane`
-`Entrez le nom du manager : Doe`
-`Entrez le pseudo de famille du manager (optionnel) :`
-`Entrez l'adresse email du manager : janedoe@example.com`
-`Entrez le numéro de téléphone du manager : 0785754598`
-`Entrez l'adresse du manager : 10-Rue-des-chemin`
-`Manager ajouté avec succès.`
+`Entrez votre choix : 1`<br>
+`Entrez le prénom du manager : Jane`<br>
+`Entrez le nom du manager : Doe`<br>
+`Entrez le pseudo de famille du manager (optionnel) :`<br>
+`Entrez l'adresse email du manager : janedoe@example.com`<br>
+`Entrez le numéro de téléphone du manager : 0785754598`<br>
+`Entrez l'adresse du manager : 10-Rue-des-chemin`<br>
+`Manager ajouté avec succès.`<br>
 
 ### Affichage des managers
 
